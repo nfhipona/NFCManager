@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36FF795B9791530C73B85B18 /* Pods_NFCManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9252AE73E1EA3D4B30ED8B /* Pods_NFCManagerTests.framework */; };
+		5C3D7EB1484D5A2D024B1EEC /* Pods_NFCManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06776A49EBB589D7886824C3 /* Pods_NFCManager.framework */; };
 		F5840FE023A7C13F00339B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FDF23A7C13F00339B2E /* AppDelegate.m */; };
 		F5840FE323A7C13F00339B2E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FE223A7C13F00339B2E /* SceneDelegate.m */; };
 		F5840FE623A7C13F00339B2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FE523A7C13F00339B2E /* ViewController.m */; };
@@ -28,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06776A49EBB589D7886824C3 /* Pods_NFCManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFCManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EE03759C372A189C0DBBA3 /* Pods-NFCManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManager.release.xcconfig"; path = "Target Support Files/Pods-NFCManager/Pods-NFCManager.release.xcconfig"; sourceTree = "<group>"; };
+		CB9252AE73E1EA3D4B30ED8B /* Pods_NFCManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFCManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F791B7E326D9BDCD9BC842 /* Pods-NFCManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManagerTests.release.xcconfig"; path = "Target Support Files/Pods-NFCManagerTests/Pods-NFCManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC90FC352033C0A81B32427C /* Pods-NFCManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-NFCManagerTests/Pods-NFCManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5840FDB23A7C13F00339B2E /* NFCManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5840FDE23A7C13F00339B2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5840FDF23A7C13F00339B2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 		F5840FF623A7C14000339B2E /* NFCManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5840FFA23A7C14000339B2E /* NFCManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCManagerTests.m; sourceTree = "<group>"; };
 		F5840FFC23A7C14000339B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManager.debug.xcconfig"; path = "Target Support Files/Pods-NFCManager/Pods-NFCManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C3D7EB1484D5A2D024B1EEC /* Pods_NFCManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +66,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36FF795B9791530C73B85B18 /* Pods_NFCManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12BA1FE7EF405E8411FF43ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06776A49EBB589D7886824C3 /* Pods_NFCManager.framework */,
+				CB9252AE73E1EA3D4B30ED8B /* Pods_NFCManagerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		751BCB80E753CD7640D83E44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */,
+				19EE03759C372A189C0DBBA3 /* Pods-NFCManager.release.xcconfig */,
+				DC90FC352033C0A81B32427C /* Pods-NFCManagerTests.debug.xcconfig */,
+				D7F791B7E326D9BDCD9BC842 /* Pods-NFCManagerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F5840FD223A7C13F00339B2E = {
 			isa = PBXGroup;
 			children = (
 				F5840FDD23A7C13F00339B2E /* NFCManager */,
 				F5840FF923A7C14000339B2E /* NFCManagerTests */,
 				F5840FDC23A7C13F00339B2E /* Products */,
+				751BCB80E753CD7640D83E44 /* Pods */,
+				12BA1FE7EF405E8411FF43ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +148,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5840FFF23A7C14000339B2E /* Build configuration list for PBXNativeTarget "NFCManager" */;
 			buildPhases = (
+				019CBAAC1D8E0C8B8554162E /* [CP] Check Pods Manifest.lock */,
 				F5840FD723A7C13F00339B2E /* Sources */,
 				F5840FD823A7C13F00339B2E /* Frameworks */,
 				F5840FD923A7C13F00339B2E /* Resources */,
@@ -132,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F584100223A7C14000339B2E /* Build configuration list for PBXNativeTarget "NFCManagerTests" */;
 			buildPhases = (
+				2F20277184C96FD20E68A512 /* [CP] Check Pods Manifest.lock */,
 				F5840FF223A7C14000339B2E /* Sources */,
 				F5840FF323A7C14000339B2E /* Frameworks */,
 				F5840FF423A7C14000339B2E /* Resources */,
@@ -202,6 +237,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		019CBAAC1D8E0C8B8554162E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NFCManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F20277184C96FD20E68A512 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NFCManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5840FD723A7C13F00339B2E /* Sources */ = {
@@ -365,6 +447,7 @@
 		};
 		F584100023A7C14000339B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +465,7 @@
 		};
 		F584100123A7C14000339B2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EE03759C372A189C0DBBA3 /* Pods-NFCManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +483,7 @@
 		};
 		F584100323A7C14000339B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC90FC352033C0A81B32427C /* Pods-NFCManagerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +504,7 @@
 		};
 		F584100423A7C14000339B2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7F791B7E326D9BDCD9BC842 /* Pods-NFCManagerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
