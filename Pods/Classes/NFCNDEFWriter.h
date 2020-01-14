@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NFCNDEFWriter : NFCReader
 
-- (void)writeMessage:(NFCNDEFMessage *)message toTag:(nonnull id<NFCNDEFTag>)tag connectHandler:(nonnull void(^)(NSError *_Nullable error))connectHandler writeHandler:(nonnull void(^)(NFCNDEFStatus status, NSUInteger capacity, NSError *_Nullable error))writeHandler;
+- (void)writeMessage:(NFCNDEFMessage *)message toTag:(nonnull id<NFCNDEFTag>)tag connectHandler:(nonnull void(^)(NSError *_Nullable error))connectHandler queryHandler:(nonnull void(^)(NFCNDEFStatus status, NSUInteger capacity, NSError *_Nullable error))queryHandler writeHandler:(nonnull void(^)(NSError *_Nullable error))writeHandler;
 
 @end
 

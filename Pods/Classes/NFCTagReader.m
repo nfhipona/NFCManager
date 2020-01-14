@@ -92,7 +92,55 @@
         if (error) {
             connectHandler(error);
         }else{
-            
+            switch (tag.type) {
+                case NFCTagTypeISO15693: {
+                    [self queryTag:[tag asNFCISO15693Tag] andWriteMessage:message queryHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+                        
+                    } writeHandler:^(NSError * _Nullable error) {
+                        
+                    }];
+                } break;
+                    
+                case NFCTagTypeFeliCa: {
+                    [self queryTag:[tag asNFCFeliCaTag] andWriteMessage:message queryHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+                        
+                    } writeHandler:^(NSError * _Nullable error) {
+                        
+                    }];
+                } break;
+                    
+                case NFCTagTypeISO7816Compatible: {
+                    [self queryTag:[tag asNFCISO7816Tag] andWriteMessage:message queryHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+                        
+                    } writeHandler:^(NSError * _Nullable error) {
+                        
+                    }];
+                } break;
+                    
+                case NFCTagTypeMiFare: {
+                    [self queryTag:[tag asNFCMiFareTag] andWriteMessage:message queryHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+                        
+                    } writeHandler:^(NSError * _Nullable error) {
+                        
+                    }];
+                } break;
+                    
+                default: break;
+            }
+        }
+    }];
+}
+
+- (void)queryTag:(id <NFCNDEFTag>)tag andWriteMessage:(NFCNDEFMessage *)message queryHandler:(nonnull void(^)(NFCNDEFStatus status, NSUInteger capacity, NSError *_Nullable error))queryHandler writeHandler:(nonnull void(^)(NSError *_Nullable error))writeHandler{
+    
+    [tag queryNDEFStatusWithCompletionHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+        
+        if (status == NFCNDEFStatusReadWrite && !error) {
+            [tag writeNDEF:message completionHandler:^(NSError * _Nullable error) {
+                writeHandler(error);
+            }];
+        }else{
+            queryHandler(status, capacity, error);
         }
     }];
 }

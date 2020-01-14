@@ -87,7 +87,7 @@
     }
 }
 
-- (void)writeMessage:(NFCNDEFMessage *)message toTag:(nonnull id<NFCNDEFTag>)tag connectHandler:(nonnull void (^)(NSError * _Nullable))connectHandler writeHandler:(nonnull void (^)(NFCNDEFStatus, NSUInteger, NSError *_Nullable))writeHandler {
+- (void)writeMessage:(NFCNDEFMessage *)message toTag:(nonnull id<NFCNDEFTag>)tag connectHandler:(nonnull void (^)(NSError * _Nullable))connectHandler queryHandler:(nonnull void (^)(NFCNDEFStatus, NSUInteger, NSError * _Nullable))queryHandler writeHandler:(nonnull void (^)(NSError * _Nullable))writeHandler {
     
     [self.session connectToTag:tag completionHandler:^(NSError * _Nullable error) {
         
@@ -95,7 +95,14 @@
             connectHandler(error);
         }else{
             [tag queryNDEFStatusWithCompletionHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
-                writeHandler(status, capacity, error);
+                
+                if (status == NFCNDEFStatusReadWrite && !error) {
+                    [tag writeNDEF:message completionHandler:^(NSError * _Nullable error) {
+                        writeHandler(error);
+                    }];
+                }else{
+                    queryHandler(status, capacity, error);
+                }
             }];
         }
     }];
