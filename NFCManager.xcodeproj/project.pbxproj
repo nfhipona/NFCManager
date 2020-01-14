@@ -17,6 +17,7 @@
 		F5840FEE23A7C14000339B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5840FEC23A7C14000339B2E /* LaunchScreen.storyboard */; };
 		F5840FF123A7C14000339B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FF023A7C14000339B2E /* main.m */; };
 		F5840FFB23A7C14000339B2E /* NFCManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FFA23A7C14000339B2E /* NFCManagerTests.m */; };
+		F584102123A7C8DE00339B2E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F584102023A7C8DE00339B2E /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		F5840FF623A7C14000339B2E /* NFCManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5840FFA23A7C14000339B2E /* NFCManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCManagerTests.m; sourceTree = "<group>"; };
 		F5840FFC23A7C14000339B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F584101F23A7C8DE00339B2E /* NFCManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCManager.entitlements; sourceTree = "<group>"; };
+		F584102023A7C8DE00339B2E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManager.debug.xcconfig"; path = "Target Support Files/Pods-NFCManager/Pods-NFCManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F584102123A7C8DE00339B2E /* ExternalAccessory.framework in Frameworks */,
 				5C3D7EB1484D5A2D024B1EEC /* Pods_NFCManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +80,7 @@
 		12BA1FE7EF405E8411FF43ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F584102023A7C8DE00339B2E /* ExternalAccessory.framework */,
 				06776A49EBB589D7886824C3 /* Pods_NFCManager.framework */,
 				CB9252AE73E1EA3D4B30ED8B /* Pods_NFCManagerTests.framework */,
 			);
@@ -90,7 +95,6 @@
 				DC90FC352033C0A81B32427C /* Pods-NFCManagerTests.debug.xcconfig */,
 				D7F791B7E326D9BDCD9BC842 /* Pods-NFCManagerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -117,6 +121,7 @@
 		F5840FDD23A7C13F00339B2E /* NFCManager */ = {
 			isa = PBXGroup;
 			children = (
+				F584101F23A7C8DE00339B2E /* NFCManager.entitlements */,
 				F5840FDE23A7C13F00339B2E /* AppDelegate.h */,
 				F5840FDF23A7C13F00339B2E /* AppDelegate.m */,
 				F5840FE123A7C13F00339B2E /* SceneDelegate.h */,
@@ -450,6 +455,7 @@
 			baseConfigurationReference = FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCManager/NFCManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKF34AM7UT;
 				INFOPLIST_FILE = NFCManager/Info.plist;
@@ -468,6 +474,7 @@
 			baseConfigurationReference = 19EE03759C372A189C0DBBA3 /* Pods-NFCManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCManager/NFCManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKF34AM7UT;
 				INFOPLIST_FILE = NFCManager/Info.plist;

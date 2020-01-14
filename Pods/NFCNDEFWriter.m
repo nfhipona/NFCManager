@@ -1,19 +1,19 @@
 //
-//  NFCNDEFReader.m
+//  NFCNDEFWriter.m
 //  Pods-NFCManager
 //
-//  Created by Neil Francis Hipona on 12/16/19.
+//  Created by Neil Francis Hipona on 1/14/20.
 //
 
-#import "NFCNDEFReader.h"
+#import "NFCNDEFWriter.h"
 
-@interface NFCNDEFReader() <NFCNDEFReaderSessionDelegate>
+@interface NFCNDEFWriter() <NFCNDEFReaderSessionDelegate>
 
 @property (nonatomic, strong) NFCNDEFReaderSession *session;
 
 @end
 
-@implementation NFCNDEFReader
+@implementation NFCNDEFWriter
 
 #pragma mark - Initializer
 
@@ -41,6 +41,13 @@
 - (void)readerSession:(NFCNDEFReaderSession *)session didDetectNDEFs:(NSArray<NFCNDEFMessage *> *)messages {
     
     [self.delegate reader:self didDetectNDEFs:messages];
+}
+
+- (void)readerSession:(NFCNDEFReaderSession *)session didDetectTags:(NSArray<__kindof id<NFCNDEFTag>> *)tags {
+    
+    if ([self.delegate respondsToSelector:@selector(reader:didDetectTags:)]) {
+        [self.delegate reader:self didDetectTags:tags];
+    }
 }
 
 - (void)readerSessionDidBecomeActive:(NFCNDEFReaderSession *)session {
@@ -78,6 +85,20 @@
     if (self.session) {
         [self.session invalidateSession];
     }
+}
+
+- (void)writeMessage:(NFCNDEFMessage *)message toTag:(nonnull id<NFCNDEFTag>)tag connectHandler:(nonnull void (^)(NSError * _Nullable))connectHandler writeHandler:(nonnull void (^)(NFCNDEFStatus, NSUInteger, NSError *_Nullable))writeHandler {
+    
+    [self.session connectToTag:tag completionHandler:^(NSError * _Nullable error) {
+        
+        if (error) {
+            connectHandler(error);
+        }else{
+            [tag queryNDEFStatusWithCompletionHandler:^(NFCNDEFStatus status, NSUInteger capacity, NSError * _Nullable error) {
+                writeHandler(status, capacity, error);
+            }];
+        }
+    }];
 }
 
 @end
