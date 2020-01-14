@@ -18,6 +18,7 @@
 		F5840FF123A7C14000339B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FF023A7C14000339B2E /* main.m */; };
 		F5840FFB23A7C14000339B2E /* NFCManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5840FFA23A7C14000339B2E /* NFCManagerTests.m */; };
 		F584102123A7C8DE00339B2E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F584102023A7C8DE00339B2E /* ExternalAccessory.framework */; };
+		F5D0AAC223CDDD2C00C27E60 /* NFCManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F5D0AAC123CDDD2C00C27E60 /* NFCManager.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F5840FFC23A7C14000339B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F584101F23A7C8DE00339B2E /* NFCManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCManager.entitlements; sourceTree = "<group>"; };
 		F584102023A7C8DE00339B2E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		F5D0AAC123CDDD2C00C27E60 /* NFCManager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NFCManager.podspec; sourceTree = SOURCE_ROOT; };
 		FCEAEAD08EB0062AB5BDD9C2 /* Pods-NFCManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCManager.debug.xcconfig"; path = "Target Support Files/Pods-NFCManager/Pods-NFCManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 		F5840FDD23A7C13F00339B2E /* NFCManager */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0AAC123CDDD2C00C27E60 /* NFCManager.podspec */,
 				F584101F23A7C8DE00339B2E /* NFCManager.entitlements */,
 				F5840FDE23A7C13F00339B2E /* AppDelegate.h */,
 				F5840FDF23A7C13F00339B2E /* AppDelegate.m */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D0AAC223CDDD2C00C27E60 /* NFCManager.podspec in Resources */,
 				F5840FEE23A7C14000339B2E /* LaunchScreen.storyboard in Resources */,
 				F5840FEB23A7C14000339B2E /* Assets.xcassets in Resources */,
 				F5840FE923A7C13F00339B2E /* Main.storyboard in Resources */,
@@ -459,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKF34AM7UT;
 				INFOPLIST_FILE = NFCManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKF34AM7UT;
 				INFOPLIST_FILE = NFCManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
